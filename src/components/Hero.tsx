@@ -1,0 +1,90 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { ArrowDown, CheckCircle } from 'lucide-react';
+import Link from 'next/link';
+
+export default function Hero() {
+  return (
+    <section
+      id="inicio"
+      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-brand-dark via-brand-primary to-brand-dark text-white overflow-hidden"
+    >
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 2px 2px, rgba(74, 158, 255, 0.3) 1px, transparent 0)`,
+          backgroundSize: '40px 40px'
+        }}></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center max-w-4xl mx-auto"
+        >
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+            <span className="gradient-text">REPARACIÓN DE COMPUTADORAS</span>
+            <br />
+            <span className="text-white">Y SERVICIOS INFORMÁTICOS</span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-white/80 mb-8">
+            Soluciones tecnológicas integrales en Costa Rica
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+              <CheckCircle size={20} className="text-brand-light" />
+              <span>Heredia y Puriscal</span>
+            </div>
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+              <CheckCircle size={20} className="text-brand-light" />
+              <span>Servicio Rápido y Confiable</span>
+            </div>
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+              <CheckCircle size={20} className="text-brand-light" />
+              <span>Atención Personalizada</span>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="#servicios"
+              className="bg-brand-light text-brand-dark px-8 py-4 rounded-lg font-semibold text-lg hover:bg-brand-accent transition-all transform hover:scale-105"
+            >
+              Ver Servicios
+            </Link>
+            <Link
+              href="#contacto"
+              className="border-2 border-brand-light text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-brand-light/10 transition-all"
+            >
+              Contactar Ahora
+            </Link>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 0.5 }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+      >
+        <motion.a
+          href="#servicios"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ repeat: Infinity, duration: 2 }}
+          className="flex flex-col items-center text-white/70 hover:text-brand-light transition-colors"
+        >
+          <span className="text-sm mb-2">Desliza para ver más</span>
+          <ArrowDown size={24} />
+        </motion.a>
+      </motion.div>
+    </section>
+  );
+}
+
