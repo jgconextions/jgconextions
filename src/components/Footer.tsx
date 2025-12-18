@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Facebook, Instagram, Phone, Mail, MapPin } from 'lucide-react';
+import { Facebook, Instagram, Phone, MapPin, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -81,11 +81,13 @@ export default function Footer() {
                 <span>(506) 8760-2146</span>
               </a>
               <a
-                href="mailto:info@jgconextions.com"
-                className="flex items-center gap-2 text-white/70 hover:text-brand-light transition-colors"
+                href="https://wa.me/50687602146"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-white/70 hover:text-[#25D366] transition-colors"
               >
-                <Mail size={18} />
-                <span>info@jgconextions.com</span>
+                <MessageCircle size={18} />
+                <span>WhatsApp</span>
               </a>
             </div>
 

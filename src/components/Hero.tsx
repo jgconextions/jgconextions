@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowDown, CheckCircle } from 'lucide-react';
+import { ArrowDown, CheckCircle, Phone, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Hero() {
@@ -18,14 +18,14 @@ export default function Hero() {
         }}></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10 mt-25 ">
+      <div className="container mx-auto px-4 relative z-10 pt-24 md:pt-28">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center max-w-4xl mx-auto"
         >
-          <h1 className="text-2xl md:text-4xl lg:text-6xl mt-20 font-bold mb-6">
+          <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold mb-6">
             <span className="gradient-text">REPARACIÓN DE COMPUTADORAS</span>
             <br />
             <span className="text-white">Y SERVICIOS INFORMÁTICOS</span>
@@ -50,7 +50,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link
               href="#servicios"
               className="bg-brand-light text-brand-dark px-8 py-4 rounded-lg font-semibold text-lg hover:bg-brand-accent transition-all transform hover:scale-105"
@@ -64,6 +64,39 @@ export default function Hero() {
               Contactar Ahora
             </Link>
           </div>
+
+          {/* Sección de contacto destacada */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+            className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 max-w-2xl mx-auto"
+          >
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-center">
+              ¿Necesitas ayuda ahora? Contáctanos
+            </h3>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://wa.me/50687602146"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 bg-[#25D366] text-white px-6 py-4 rounded-lg font-semibold text-lg hover:bg-[#20BA5A] transition-all transform hover:scale-105 shadow-lg"
+              >
+                <MessageCircle size={24} />
+                <span>WhatsApp</span>
+              </a>
+              <a
+                href="tel:+50687602146"
+                className="flex items-center justify-center gap-3 bg-brand-light text-brand-dark px-6 py-4 rounded-lg font-semibold text-lg hover:bg-brand-accent transition-all transform hover:scale-105 shadow-lg"
+              >
+                <Phone size={24} />
+                <span>(506) 8760-2146</span>
+              </a>
+            </div>
+            <p className="text-white/70 text-sm text-center mt-4">
+              Respuesta rápida • Atención personalizada • Servicio confiable
+            </p>
+          </motion.div>
         </motion.div>
       </div>
 
