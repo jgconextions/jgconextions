@@ -1,0 +1,35 @@
+{
+  "images": [
+    {
+      "id": 1,
+      "title": "Trabajo de Reparación",
+      "category": "Computadoras",
+      "image": "/images/trabajo-1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Instalación de CCTV",
+      "category": "Seguridad",
+      "image": "/images/trabajo-2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Mantenimiento de Redes",
+      "category": "Redes",
+      "image": "/images/trabajo-3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Reparación de Impresora",
+      "category": "Impresoras",
+      "image": "/images/trabajo-4.png"
+    },
+    {
+      "id": 5,
+      "title": "Aire Acondicionado",
+      "category": "Climatización",
+      "image": "/images/trabajo-5.jpg"
+    }
+  ]
+}
+

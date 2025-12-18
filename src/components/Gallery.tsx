@@ -2,51 +2,16 @@
 
 import { motion } from 'framer-motion';
 import { Image as ImageIcon } from 'lucide-react';
-import Image from 'next/image';
+import galleryData from '@/data/gallery.json';
 
-// Para agregar imágenes de trabajos realizados:
-// 1. Coloca las imágenes en la carpeta public/
-// 2. Actualiza el array galleryImages con las rutas de tus imágenes
-// 3. Descomenta el código de Image dentro del map y comenta el div placeholder
+interface GalleryImage {
+  id: number;
+  title: string;
+  category: string;
+  image: string | null;
+}
 
-const galleryImages = [
-  {
-    id: 1,
-    title: 'Trabajo de Reparación',
-    category: 'Computadoras',
-    image: null, // Cambia a '/trabajo-1.jpg' cuando tengas la imagen
-  },
-  {
-    id: 2,
-    title: 'Instalación de CCTV',
-    category: 'Seguridad',
-    image: null, // Cambia a '/trabajo-2.jpg' cuando tengas la imagen
-  },
-  {
-    id: 3,
-    title: 'Mantenimiento de Redes',
-    category: 'Redes',
-    image: null, // Cambia a '/trabajo-3.jpg' cuando tengas la imagen
-  },
-  {
-    id: 4,
-    title: 'Reparación de Impresora',
-    category: 'Impresoras',
-    image: null, // Cambia a '/trabajo-4.jpg' cuando tengas la imagen
-  },
-  {
-    id: 5,
-    title: 'Aire Acondicionado',
-    category: 'Climatización',
-    image: null, // Cambia a '/trabajo-5.jpg' cuando tengas la imagen
-  },
-  {
-    id: 6,
-    title: 'Instalación de Equipos',
-    category: 'Instalación',
-    image: null, // Cambia a '/trabajo-6.jpg' cuando tengas la imagen
-  },
-];
+const galleryImages: GalleryImage[] = galleryData.images;
 
 export default function Gallery() {
   return (
@@ -77,25 +42,24 @@ export default function Gallery() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-square"
+              className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
             >
               {item.image ? (
-                <>
-                  <Image
+                <div className="relative w-full h-[400px] bg-gray-100 overflow-hidden rounded-xl">
+                  <img
                     src={item.image}
                     alt={item.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent z-10 flex items-end">
-                    <div className="p-4 text-white">
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent z-10 flex items-end pointer-events-none">
+                    <div className="p-4 text-white w-full">
                       <h3 className="font-bold text-lg mb-1">{item.title}</h3>
                       <p className="text-sm text-white/80">{item.category}</p>
                     </div>
                   </div>
-                </>
+                </div>
               ) : (
-                <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/80 to-brand-primary/80 z-10 flex items-center justify-center">
+                <div className="relative w-full h-[400px] bg-gradient-to-br from-brand-dark/80 to-brand-primary/80 flex items-center justify-center">
                   <div className="text-center text-white p-4">
                     <ImageIcon size={48} className="mx-auto mb-2 opacity-50" />
                     <p className="text-sm opacity-75">
