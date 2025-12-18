@@ -17,11 +17,28 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_CR",
     siteName: "JG Conextions",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "JG Conextions - Soluciones Tecnológicas Integrales en Costa Rica",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "JG Conextions - Soluciones Tecnológicas Integrales",
     description: "Servicios de mantenimiento y reparación de equipos tecnológicos en Costa Rica",
+    images: ["/opengraph-image"],
+  },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/apple-icon.svg", type: "image/svg+xml" },
+    ],
   },
   robots: {
     index: true,

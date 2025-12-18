@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-brand-dark via-brand-primary to-brand-dark text-white overflow-hidden"
+      className="relative min-h-screen flex items-start justify-center bg-gradient-to-br from-brand-dark via-brand-primary to-brand-dark text-white overflow-hidden"
     >
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -18,7 +18,7 @@ export default function Hero() {
         }}></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10 pt-24 md:pt-28">
+      <div className="container mx-auto px-4 relative z-10 pt-24 md:pt-28 pb-20 md:pb-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -50,27 +50,12 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
-              href="#servicios"
-              className="bg-brand-light text-brand-dark px-8 py-4 rounded-lg font-semibold text-lg hover:bg-brand-accent transition-all transform hover:scale-105"
-            >
-              Ver Servicios
-            </Link>
-            <Link
-              href="#contacto"
-              className="border-2 border-brand-light text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-brand-light/10 transition-all"
-            >
-              Contactar Ahora
-            </Link>
-          </div>
-
           {/* Sección de contacto destacada */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 max-w-2xl mx-auto"
+            className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 max-w-2xl mx-auto mb-16 md:mb-20"
           >
             <h3 className="text-xl md:text-2xl font-bold mb-4 text-center">
               ¿Necesitas ayuda ahora? Contáctanos
@@ -105,7 +90,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.5 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-12 md:bottom-16 left-1/2 transform -translate-x-1/2 z-20"
       >
         <motion.a
           href="#servicios"
