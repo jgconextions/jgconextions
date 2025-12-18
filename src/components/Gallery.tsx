@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Image as ImageIcon } from 'lucide-react';
+import Image from 'next/image';
 import galleryData from '@/data/gallery.json';
 
 interface GalleryImage {
@@ -46,10 +47,11 @@ export default function Gallery() {
             >
               {item.image ? (
                 <div className="relative w-full h-[400px] bg-gray-100 overflow-hidden rounded-xl">
-                  <img
+                  <Image
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent z-10 flex items-end pointer-events-none">
                     <div className="p-4 text-white w-full">

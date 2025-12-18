@@ -1,5 +1,7 @@
 import { ImageResponse } from 'next/og';
 
+export const runtime = 'edge';
+
 export const alt = 'JG Conextions - Soluciones Tecnológicas Integrales en Costa Rica';
 export const size = {
   width: 1200,
@@ -101,7 +103,7 @@ export default async function Image() {
               lineHeight: '1.4',
             }}
           >
-            Reparación de Computadoras • CCTV • Redes • Impresoras • Aires Acondicionados
+            Reparación de Computadoras - CCTV - Redes - Impresoras - Aires Acondicionados
           </p>
           
           <div
@@ -121,7 +123,7 @@ export default async function Image() {
                 fontWeight: '500',
               }}
             >
-              📍 Heredia y Puriscal, Costa Rica
+              Heredia y Puriscal, Costa Rica
             </p>
           </div>
         </div>
