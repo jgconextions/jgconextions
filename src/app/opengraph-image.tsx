@@ -24,7 +24,6 @@ export default async function Image() {
           fontFamily: 'system-ui, -apple-system, sans-serif',
         }}
       >
-        {/* Patrón de fondo */}
         <div
           style={{
             position: 'absolute',
@@ -36,7 +35,6 @@ export default async function Image() {
           }}
         />
         
-        {/* Contenido principal */}
         <div
           style={{
             display: 'flex',
@@ -48,7 +46,6 @@ export default async function Image() {
             padding: '80px',
           }}
         >
-          {/* Logo/Icono */}
           <div
             style={{
               width: '120px',
@@ -72,7 +69,6 @@ export default async function Image() {
             </svg>
           </div>
           
-          {/* Título */}
           <h1
             style={{
               fontSize: '72px',
@@ -85,7 +81,6 @@ export default async function Image() {
             JG CONEXTIONS
           </h1>
           
-          {/* Subtítulo */}
           <h2
             style={{
               fontSize: '36px',
@@ -97,7 +92,6 @@ export default async function Image() {
             Soluciones Tecnológicas Integrales
           </h2>
           
-          {/* Descripción */}
           <p
             style={{
               fontSize: '28px',
@@ -110,7 +104,6 @@ export default async function Image() {
             Reparación de Computadoras • CCTV • Redes • Impresoras • Aires Acondicionados
           </p>
           
-          {/* Ubicación */}
           <div
             style={{
               marginTop: '40px',
