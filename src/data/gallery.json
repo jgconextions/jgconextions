@@ -2,8 +2,8 @@
   "images": [
     {
       "id": 1,
-      "title": "Trabajo de Reparación",
-      "category": "Computadoras",
+      "title": "Aire Acondicionado",
+      "category": "Climatización",
       "image": "/images/trabajo-1.jpg"
     },
     {
@@ -20,14 +20,14 @@
     },
     {
       "id": 4,
-      "title": "Reparación de Impresora",
-      "category": "Impresoras",
+      "title": "Trabajo de Reparación",
+      "category": "Computadoras",
       "image": "/images/trabajo-4.png"
     },
     {
       "id": 5,
-      "title": "Aire Acondicionado",
-      "category": "Climatización",
+      "title": "Reparación de Impresora",
+      "category": "Impresoras",
       "image": "/images/trabajo-5.jpg"
     }
   ]

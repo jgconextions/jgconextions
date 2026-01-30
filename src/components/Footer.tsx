@@ -135,8 +135,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-8 pt-8 text-center text-white/60 text-sm">
           <p>
-            © {new Date().getFullYear()} JG Conextions. Todos los derechos
-            reservados.
+            © 2026 JG Conextions. Todos los derechos reservados.
           </p>
         </div>
       </div>

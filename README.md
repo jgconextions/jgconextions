@@ -56,5 +56,5 @@ jgconextions/
 
 ## 📝 Licencia
 
-© 2024 JGConextions. Todos los derechos reservados.
+© 2026 JGConextions. Todos los derechos reservados.
 
